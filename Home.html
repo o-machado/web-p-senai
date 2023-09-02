@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+
+<svg xmlns="http://www.w3.org/2000/svg" class="theme-button" viewBox="0 0 16 16">
+  <path d="M8 15A7 7 0 1 0 8 1v14zm0 1A8 8 0 1 1 8 0a8 8 0 0 1 0 16z"/>
+</svg>
+<link rel="stylesheet" href="HomeCSS.css">
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Login Web</title>
+</head>
+
+<body>
+	<i class="theme-button" onclick="alternarTema()"></i>
+	<div class="quadrado zoom-in" id="quadrado">
+	<div class="quadrado" id="quadrado">
+		<h1 class="bem-vindo">Olá, seja Bem vindo</h1>
+	</div>
+
+	<script>
+
+		window.addEventListener('load', function() {
+  		var quadrado = document.getElementById('quadrado');
+  		quadrado.addEventListener('animationend', function() {
+    		quadrado.classList.remove('zoom-in');
+  		});
+		});
+
+		function alternarTema() {
+		  var quadrado = document.getElementById('quadrado');
+		  quadrado.classList.toggle('dark-theme');
+
+		  var themeButton = document.querySelector('.theme-button');
+			  if (quadrado.classList.contains('dark-theme')) {
+			    themeButton.classList.remove('theme-button-light');
+			    themeButton.classList.add('theme-button-dark');
+			  } else {
+			    themeButton.classList.remove('theme-button-dark');
+			    themeButton.classList.add('theme-button-light');
+			  }
+
+			  function alternarTema() {
+ 				 var body = document.body;
+  				body.classList.toggle('dark-theme');
+				}
+		}
+
+
+	</script>
+
+</body>
+</html>
